@@ -6,11 +6,13 @@
  * }
  */
 
-package leetcodesolvego
+package leetcode
+
 type ListNode struct {
-	Val int
+	Val  int
 	Next *ListNode
 }
+
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) (head *ListNode) {
 	var tail *ListNode
 	carry := 0
@@ -34,7 +36,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) (head *ListNode) {
 			tail = tail.Next
 		}
 	}
-	if carry>0 {
+	if carry > 0 {
 		tail.Next = &ListNode{Val: carry}
 	}
 	return
